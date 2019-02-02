@@ -1,0 +1,29 @@
+---
+title: "R Markdown Presentation and Plotly"
+author: "Shane B. Bimeda"
+date: "February 2, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown Presentation and Plotly  
+
+#### This is my *submission* to the **peer-graded assignment for Week 3** of the **Developing Data Products Module**   
+
+#### For this, I have loaded the **mtcars** dataset from the **datasets** package and used the **plotly** package to generate the plot. 
+
+## Plot of Miles per Gallon (mpg) and Displacement (disp) and Cylinder (4, 6, and 8)
+
+```{r, comment= FALSE, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+library(datasets)
+library(plotly)
+plot_ly(mtcars, x = ~disp, 
+        y = ~mpg, type = "scatter", 
+        color = ~as.factor(cyl),
+        size = ~hp)
+```  
+
+##                 Thank you!     :)
